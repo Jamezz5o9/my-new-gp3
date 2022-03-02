@@ -1,0 +1,27 @@
+.NavBar .MobileNavigation{
+    display: none;
+}
+ li a{
+     list-style:none;
+ }
+
+@media (max-width: 990px) {
+    .NavBar {
+        margin:0px 30px;        
+    }
+    .NavBar .Navigation{
+        display: none;
+        
+    }
+    .NavBar .MobileNavigation{
+        display: flex;
+        background: red;       
+        align-items:center;
+    }
+    .NavBar .MobileNavigation .Hamburger {
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+    }
+}
+ 

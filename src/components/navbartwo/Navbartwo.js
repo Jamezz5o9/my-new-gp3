@@ -1,6 +1,6 @@
 import MobileNavigation from './MobileNavigation';
 import Navigation from './Navigation';
-import classes from './navbartwo.css'
+import './navbartwo.css';
 
 
 
