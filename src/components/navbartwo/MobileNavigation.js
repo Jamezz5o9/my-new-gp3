@@ -5,12 +5,14 @@ import {ueState} from 'react'
 
 
 const MobileNavigation = () => {
+
+    const [open, setOpen] = useState(false);
+
+
     return (
         <nav className='MobileNavigation'>
             <CgMenuRound className="Hamburger" size='40px' color='white'
-            onClick={() => {
-               console.log(`You clicked on this icon my friend`) 
-            }}></CgMenuRound>
+            onClick={() => setOpen(!open)} />
             <NavLinks />
         </nav>
     )
