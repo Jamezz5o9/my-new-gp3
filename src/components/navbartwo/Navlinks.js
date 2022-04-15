@@ -1,17 +1,33 @@
-import classes from './navbartwo.css';
+import './navbartwo.css';
+import {motion} from "framer-motion"
 
 
 
-const NavLinks = () => {
+const NavLinks = ({isMobile, closeMobileMenu}) => {
+
+    const animateFrom = {opacity: 0, y:-40}
+    const animateTo = {opacity: 1, y: 0}
+
     return (
-        <ul>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#food">Food</a>
-            </li>
-        </ul>
+        <nav>
+            <ul>
+                <motion.li 
+                    initial={animateFrom}
+                    animate={animateTo}
+                    transition={{delay: 0.20}}
+                    onClick={() =>isMobile && closeMobileMenu() }>
+                    <a href="#about">About</a>
+                </motion.li>
+                <motion.li 
+                    initial={animateFrom}
+                    animate={animateTo}
+                    transition={{delay: 0.40}}
+                    onClick={() =>isMobile && closeMobileMenu() }>
+                    <a href="#food">Food</a>
+                </motion.li>
+            </ul>
+        </nav>
+        
     )
 }
 
