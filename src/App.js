@@ -2,8 +2,9 @@ import React from 'react';
 // import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';
 // import { CTA, Brand, Navbar, Navbartwo } from './components';
 import './App.css';
-import NavBar from './Payment/component/Navbar';
-import {BrowserRouter as Router} from "react-router-dom"
+import {BrowserRouter as Router} from "react-router-dom";
+import Home from "../src/Payment/pages";
+
 
 const App = () => {
   return (
@@ -20,8 +21,8 @@ const App = () => {
     <CTA />
     <Blog />
     <Footer /> */}
-
-    <NavBar />
+    <Home />
+    
 
   </Router>
   )
