@@ -3,11 +3,11 @@ import React from 'react';
 // import { CTA, Brand, Navbar, Navbartwo } from './components';
 import './App.css';
 import NavBar from './Payment/component/Navbar';
-
+import {BrowserRouter as Router} from "react-router-dom"
 
 const App = () => {
   return (
-    <div className="App">
+    <Router>
       {/* <Navbartwo />
     <div className="gradient__bg">
       <Navbar />
@@ -23,7 +23,7 @@ const App = () => {
 
     <NavBar />
 
-  </div>
+  </Router>
   )
 }
 
