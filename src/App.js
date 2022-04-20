@@ -1,31 +1,18 @@
-import React from 'react';
-// import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';
-// import { CTA, Brand, Navbar, Navbartwo } from './components';
-import './App.css';
-import {BrowserRouter as Router} from "react-router-dom";
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../src/Payment/pages";
-
+import SigninPage from "./Payment/pages/signin";
 
 const App = () => {
   return (
-    <Router>
-      {/* <Navbartwo />
-    <div className="gradient__bg">
-      <Navbar />
-      <Header />
-    </div>
-    <Brand />
-    <WhatGPT3 />
-    <Features />
-    <Possibility />
-    <CTA />
-    <Blog />
-    <Footer /> */}
-    <Home />
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SigninPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-  </Router>
-  )
-}
-
-export default App
+export default App;
