@@ -20,7 +20,7 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
         <VideoBg autoPlay loop muted src={video} />
       </HeroBg>
@@ -37,6 +37,11 @@ const HeroSection = () => {
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
           >
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
